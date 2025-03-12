@@ -1,0 +1,617 @@
+:root {
+  /* Colors */
+  --grey: rgb(122, 116, 110);
+  --black: rgb(3, 3, 3);
+  --white: rgb(255, 247, 240);
+  --light-red: rgb(235, 117, 101);
+  --cyan: rgb(97, 196, 183);
+  --burgundy: rgb(83, 32, 73);
+  --purple: rgb(117, 92, 222);
+  --orange: rgb(246, 165, 96);
+  --pink: rgb(243, 158, 158);
+
+  /* Fonts */
+  --font-primary: "Plus Jakarta Sans", sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --font-weight-bolder: 700;
+  --font-weight-extra-bold: 800;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base style */
+
+html {
+  font-size: 16px;
+  font-family: var(--font-primary);
+}
+
+body {
+  padding-inline: 7.5rem;
+  padding-block: 45px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.main-container {
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+header,
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 28px;
+  width: 228px;
+  height: 56px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+header > button {
+  justify-self: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.service-list-grid {
+  display: grid;
+}
+
+li {
+  border-radius: 10px;
+  position: relative;
+  padding: 1rem;
+}
+
+figure {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+figure > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+}
+
+figure > p {
+  position: absolute;
+  bottom: 0;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.graphic-design-item {
+  background-color: var(--purple);
+}
+
+.ux-item {
+  background-color: var(--orange);
+}
+
+.apps-item {
+  background-color: var(--pink);
+}
+
+.photography-item {
+  background-color: var(--cyan);
+}
+
+.illustration-item {
+  background-color: var(--light-red);
+}
+
+.motion-graphics-item {
+  background-color: var(--burgundy);
+}
+
+.about-me-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slides-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+
+  transform: translateX(-850px);
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100vw; */
+}
+
+.left-arrow,
+.right-arrow {
+  background-color: var(--black);
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+}
+
+.footer-main-section {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 320px;
+  padding-inline: 3rem;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-text > h2,
+.footer-text > p {
+  text-align: left;
+}
+
+.footer-main-section > button {
+  background-color: var(--light-red);
+  color: var(--white);
+}
+
+.about-me-text > button {
+  background-color: var(--light-red);
+  color: var(--white);
+}
+
+.footer-header > button {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* Active state */
+
+header > button:hover,
+.footer-header > button:hover {
+  background-color: var(--purple);
+}
+
+.footer-main-section > button:hover,
+.about-me-text > button:hover {
+  background-color: var(--orange);
+}
+
+.buttons-container > button:hover {
+  background-color: var(--purple);
+}
+
+/* Desktop design */
+header > button {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.main-container {
+  max-width: 1200px;
+}
+
+.title-text {
+  width: 752px;
+  justify-self: center;
+  margin-bottom: 5rem;
+  margin-top: 4.1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+.title-text > p {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--grey);
+  margin-inline: 10px;
+  padding-inline: 1rem;
+  margin-top: 1.4rem;
+}
+
+.service-list-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.graphic-design-item {
+  grid-area: 1/1/3/3;
+  /* height: 22.3rem; */
+}
+
+.ux-item {
+  grid-area: 1/3/2/4;
+  /* width: 10.2rem; */
+}
+
+.apps-item {
+  grid-area: 1/4/2/5;
+  /* width: 10.2rem; */
+}
+
+.photography-item {
+  grid-area: 1/5/2/7;
+  /* height: 11.35rem; */
+}
+
+.illustration-item {
+  grid-area: 2/3/3/5;
+  height: 158px;
+  /* width: 22.1; */
+}
+
+.motion-graphics-item {
+  grid-area: 2/5/3/7;
+  /* height: 9.8rem; */
+}
+
+.profile-image > img {
+  height: 445px;
+  width: 445px;
+}
+
+.about-me-section {
+  margin-top: 8.5rem;
+  margin-bottom: 2.8rem;
+  height: 27.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-me-text {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-me-text > h2,
+.about-me-text > p {
+  text-align: left;
+}
+
+.about-me-text > h2 {
+  font-size: 2.5rem;
+}
+
+.about-me-text > p {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--grey);
+  margin-block: 1.4rem;
+  padding-right: 0.2rem;
+}
+
+.carousel > h3 {
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.buttons-container {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.carousel {
+  margin-bottom: 4.2rem;
+}
+
+.footer-main-section {
+  margin-bottom: 7.4rem;
+}
+
+.footer-text {
+  width: 540px;
+}
+
+.footer-text > h2 {
+  font-size: 2.5rem;
+}
+
+.footer-text > p {
+  font-size: 1.1rem;
+  padding-right: 0.1rem;
+}
+
+/* Tablet media queries */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding-inline: 2.5rem;
+    overflow-x: hidden;
+  }
+  .main-container {
+    width: 100%;
+    max-width: 690px;
+    margin: 0 auto;
+  }
+
+  .title-text {
+    max-width: 690px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  .title-text > p {
+    font-size: 1.1rem;
+    padding-inline: 3.2rem;
+  }
+
+  .service-list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .graphic-design-item {
+    grid-area: 1/1/3/3;
+    /* height: 22.3rem; */
+  }
+
+  .ux-item {
+    grid-area: 1/3/2/4;
+    /* width: 10.2rem; */
+  }
+
+  .apps-item {
+    grid-area: 1/4/2/5;
+    /* width: 10.2rem; */
+  }
+
+  .photography-item {
+    grid-area: 3/1/4/3;
+    /* height: 11.35rem; */
+  }
+
+  .illustration-item {
+    grid-area: 2/3/3/5;
+    height: 158px;
+    /* width: 22.1; */
+  }
+
+  .motion-graphics-item {
+    grid-area: 3/3/4/5;
+    /* height: 9.8rem; */
+  }
+
+  .about-me-section {
+    width: 100vw;
+    margin-left: -2.5rem;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.5rem;
+    box-sizing: border-box;
+  }
+
+  .profile-image > img {
+    max-width: 364px;
+    height: auto;
+  }
+
+  .about-me-text {
+    margin-left: 4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 21.18rem;
+  }
+
+  .about-me-text > h2 {
+    font-size: 2rem;
+  }
+
+  .about-me-text > p {
+    line-height: 1.6rem;
+  }
+
+  .carousel > h3 {
+    font-size: 2rem;
+  }
+
+  .slides-container {
+    transform: translateX(-1040px);
+  }
+
+  .footer-main-section {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-inline: 1rem;
+    overflow-x: hidden;
+  }
+
+  .main-container {
+    width: 100vw;
+    max-width: 21.4rem;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  header {
+    height: 2.75rem;
+  }
+
+  header > button,
+  .footer-header > button {
+    width: 11rem;
+  }
+
+  .title-text {
+    max-width: 21.4rem;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .title-text > p {
+    font-size: 1rem;
+    padding-inline: 1.5rem;
+  }
+
+  .service-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+  }
+
+  .graphic-design-item {
+    grid-area: 1 / 1/ 3/ 3;
+  }
+
+  .ux-item {
+    grid-area: 3/1/4/2;
+  }
+
+  .apps-item {
+    grid-area: 3/2/4/3;
+  }
+
+  .photography-item {
+    grid-area: 5/1/6/3;
+  }
+
+  .illustration-item {
+    grid-area: 4/1/5/3;
+  }
+
+  .motion-graphics-item {
+    grid-area: 6/1/7/3;
+  }
+
+  .about-me-section {
+    flex-direction: column;
+  }
+
+  .profile-image > img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .about-me-section {
+    margin-top: 6.2rem;
+    margin-bottom: 14rem;
+  }
+
+  .about-me-text {
+    max-width: 343px;
+    margin-top: 2.3rem;
+  }
+
+  .about-me-text > h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-me-text > p {
+    line-height: 1.6rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .about-me-text {
+    align-items: center;
+  }
+
+  .carousel {
+    min-height: 340px;
+  }
+
+  .carousel > h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .slide > img {
+    height: 180px;
+  }
+
+  .slides-container {
+    transform: translateX(-550px);
+  }
+
+  .footer-main-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-text {
+    max-width: 295px;
+  }
+
+  .footer-text > h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .footer-text > p {
+    font-size: 1rem;
+    margin-block: 1.5rem;
+    text-align: center;
+  }
+}
